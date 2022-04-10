@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Shojumaru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to left, rgba(238, 155, 166, 0.9), rgba(255, 219, 223, 0.6)), url("https://cdn.pixabay.com/photo/2013/08/09/17/19/drummer-171120_960_720.jpg") center/cover no-repeat fixed;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root #drum-machine {
+  width: 30%;
+  min-width: 300px;
+  margin: 120px 0;
+}
+#root #drum-machine #title {
+  width: 100%;
+  font-family: "Shojumaru", cursive;
+  text-align: center;
+}
+#root #drum-machine #title::first-letter {
+  font-size: 3rem;
+  vertical-align: sub;
+  text-decoration: underline;
+  color: #32b8b8;
+}
+#root #drum-machine div {
+  width: 100%;
+}
+#root #drum-machine div #display {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 2px 2px 5px 1px #bebefd, -2px 2px 5px 1px #bebefd, 2px -2px 5px 1px #bebefd, -2px -2px 5px 1px #bebefd;
+  outline: none;
+  font-family: "Germania One", cursive;
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  line-height: 40px;
+}
+#root #drum-machine div #display:hover {
+  cursor: auto;
+}
+#root #drum-machine #drums {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: repeat(3, 60px);
+  grid-column-gap: 5%;
+  grid-row-gap: 13px;
+  margin-top: 20px;
+}
+#root #drum-machine #drums .drum-pad {
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+}
+#root #drum-machine #drums .drum-pad button {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  outline: none;
+  border: none;
+  font-family: "Shojumaru", cursive;
+  font-size: 1.5rem;
+  color: #32b8b8;
+  box-shadow: 2px 2px 5px 1px #bebefd, -2px 2px 5px 1px #bebefd, 2px -2px 5px 1px #bebefd, -2px -2px 5px 1px #bebefd;
+}
+#root #drum-machine #drums .drum-pad .button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#root #drum-machine .volume-power {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+#root #drum-machine .volume-power div {
+  width: 64%;
+}
+#root #drum-machine .volume-power div #volume {
+  display: block;
+  width: 100%;
+  height: 40px;
+  outline: none;
+}
+#root #drum-machine .volume-power #power {
+  width: calc(33.33% - 26px);
+  height: 30px;
+  border: 2px solid white;
+  background-color: aliceblue;
+  box-shadow: 2px 2px 5px 1px #bebefd, -2px 2px 5px 1px #bebefd, 2px -2px 5px 1px #bebefd, -2px -2px 5px 1px #bebefd;
+}
+#root #drum-machine .volume-power #power:hover {
+  cursor: pointer;
+}
+#root #drum-machine .volume-power #power #state {
+  height: 100%;
+  width: 50%;
+  background-color: #4ecc67;
+  font-family: "Shojumaru", cursive;
+  text-align: center;
+  font-size: 80%;
+  line-height: 1.6rem;
+}
+
+@media screen and (max-width: 1050px) {
+  #title {
+    font-size: 1.5rem;
+  }
+  #title::first-letter {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
